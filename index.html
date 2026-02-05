@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINI Capital – Trade Instantly</title>
+
+  <!-- Google Fonts (similar bold fintech vibe) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #05070d;
+      --card: #0b1020;
+      --accent: #5b7cff;
+      --accent-2: #22c55e;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0b1020, #05070d 60%);
+      color: var(--text);
+    }
+
+    header {
+      padding: 24px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: rgba(91,124,255,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(91,124,255,0.4);
+    }
+
+    .hero {
+      padding: 80px 8% 40px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--accent), #8fa2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    .cta-box {
+      background: linear-gradient(180deg, #0f172a, #020617);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 520px;
+      margin: auto;
+    }
+
+    form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    input {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: #020617;
+      color: white;
+      font-size: 15px;
+    }
+
+    input::placeholder { color: #6b7280; }
+
+    button {
+      padding: 14px 22px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(90deg, var(--accent), #8fa2ff);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover { opacity: 0.9; }
+
+    .trust {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .features {
+      padding: 60px 8%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .feature h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 30px 8%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">FINI<span style="color:var(--accent)">Capital</span></div>
+    <div class="badge">Launching Soon</div>
+  </header>
+
+  <section class="hero">
+    <h1>Get <span>Instant Capital</span><br/>Start Trading Today</h1>
+    <p>
+      No challenges. No waiting period. FINI Capital gives you funded accounts instantly so you can start trading the moment you sign up.
+    </p>
+
+    <div class="cta-box">
+      <form onsubmit="joinWaitlist(event)">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Join Waitlist</button>
+      </form>
+      <div class="trust">Early access • Priority funding • Zero obligation</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>⚡ Instant Funding</h3>
+      <p>Get access to trading capital immediately after signup. No evaluation phase.</p>
+    </div>
+    <div class="feature">
+      <h3>📈 Trade What You Know</h3>
+      <p>Built for serious traders in futures, options, and indices.</p>
+    </div>
+    <div class="feature">
+      <h3>🛡️ Smart Risk Rules</h3>
+      <p>Simple, transparent risk management aligned with professional desks.</p>
+    </div>
+    <div class="feature">
+      <h3>💰 Scalable Capital</h3>
+      <p>Prove consistency and unlock higher funded limits over time.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 FINI Capital. All rights reserved. | Trading involves risk.
+  </footer>
+
+  <script>
+    function joinWaitlist(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+
+      // Replace with backend / Firebase / Sheet / API
+      alert(`Thanks! ${email} has been added to the waitlist.`);
+
+      document.getElementById('email').value = '';
+    }
+  </script>
+
+</body>
+</html>
