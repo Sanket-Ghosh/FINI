@@ -56,6 +56,35 @@
       margin: auto;
       text-align: center;
     }
+    .simulated-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(
+        180deg,
+        rgba(34, 197, 94, 0.18),
+        rgba(34, 197, 94, 0.08)
+        );
+      border: 1px solid rgba(34, 197, 94, 0.45);
+      color: #22c55e;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow:
+        0 0 20px rgba(34, 197, 94, 0.25),
+        inset 0 0 12px rgba(34, 197, 94, 0.15);
+    }
+
+    .simulated-badge .icon {
+      font-size: 15px;
+      line-height: 1;
+    }
+    
+    .simulated-badge .text {
+      white-space: nowrap;
+    }
+
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
@@ -173,6 +202,11 @@
   </header>
 
   <section class="hero">
+    <div class="simulated-badge">
+      <span class="icon">⛓</span>
+      <span class="text">Simulated Capital · Skill-Based Incentives · Zero Market Risk</span>
+    </div>
+
     <h1>Get <span>Instant Capital</span><br/>Start Trading Today</h1>
     <h2>Learn with <spaan>Simulated Capital</spaan> and earn <span>Real Money</span></h2>
     <p>
